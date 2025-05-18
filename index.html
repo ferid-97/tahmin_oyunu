@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tahmin Et Oyunu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tahmin Et!</h1>
+    <div class="difficulty">
+      <label for="difficultySelect">Zorluk Seviyesi:</label>
+      <select id="difficultySelect">
+        <option value="easy">Kolay (1-50, 12 hak, 90 sn)</option>
+        <option value="medium" selected>Orta (1-100, 10 hak, 60 sn)</option>
+        <option value="hard">Zor (1-200, 7 hak, 45 sn)</option>
+      </select>
+      <button id="startBtn">Oyunu Başlat</button>
+    </div>
+    <div id="gameArea" style="display:none;">
+      <p id="desc"></p>
+      <div class="status">
+        <span>Kalan Hak: <span id="attemptsLeft">--</span></span>
+        <span>Süre: <span id="timer">--</span></span>
+        <span>En İyi Skor: <span id="highScore">0</span></span>
+      </div>
+      <input type="number" id="guessInput" min="1" max="100" autofocus>
+      <button id="guessBtn">Tahmin Et</button>
+      <button id="hintBtn">İpucu Al (-1 hak)</button>
+      <div id="hintArea"></div>
+      <div id="result"></div>
+      <div class="history">
+        <h3>Tahmin Geçmişi</h3>
+        <ul id="guessHistory"></ul>
+      </div>
+      <button id="resetBtn" style="display:none;">Yeniden Başla</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

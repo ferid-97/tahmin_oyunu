@@ -1,0 +1,160 @@
+body {
+  background: linear-gradient(120deg, #e2e2e2 0%, #c9d6ff 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: #fff;
+  max-width: 440px;
+  margin: 60px auto 0;
+  padding: 38px 26px 28px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(52,152,219,0.12);
+  text-align: center;
+}
+
+h1 {
+  color: #2471A3;
+  margin-bottom: 10px;
+}
+
+.difficulty {
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+}
+
+.difficulty label {
+  font-size: 1.08em;
+  color: #2874A6;
+  font-weight: 500;
+}
+
+#difficultySelect {
+  background: #f4f8fb;
+  color: #2471A3;
+  border: 2px solid #3498db;
+  border-radius: 7px;
+  font-size: 1.05em;
+  padding: 6px 28px 6px 10px;
+  margin-left: 8px;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 7px rgba(52,152,219,0.06);
+  cursor: pointer;
+  min-width: 210px;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%233498db' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 12px;
+}
+
+#difficultySelect:focus {
+  border: 2px solid #2ecc71;
+  box-shadow: 0 0 0 2px #baf8d4;
+}
+
+#difficultySelect option {
+  background: #fff;
+  color: #2471A3;
+  font-size: 1em;
+  padding: 8px;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  font-size: 18px;
+  color: #1B2631;
+}
+
+input[type="number"] {
+  width: 120px;
+  padding: 8px;
+  font-size: 18px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: border 0.2s;
+  background: #f7fbfd;
+}
+input[type="number"]:focus {
+  border: 2px solid #2ecc71;
+  outline: none;
+}
+
+button {
+  padding: 9px 18px;
+  font-size: 16px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button:hover {
+  background: #217dbb;
+}
+
+#hintBtn {
+  background: #8e44ad;
+  margin-left: 6px;
+}
+#hintBtn:hover {
+  background: #6c3483;
+}
+
+#result {
+  margin-top: 22px;
+  font-size: 18px;
+  font-weight: bold;
+  min-height: 32px;
+  transition: color 0.2s;
+}
+
+#hintArea {
+  margin-top: 10px;
+  color: #6c3483;
+  font-size: 16px;
+  min-height: 18px;
+}
+
+.history {
+  margin-top: 22px;
+  text-align: left;
+}
+.history h3 {
+  margin-bottom: 6px;
+  color: #2874A6;
+  font-size: 15px;
+}
+#guessHistory {
+  min-height: 25px;
+  padding-left: 16px;
+  font-size: 15px;
+  color: #626567;
+}
+#guessHistory li.correct {
+  color: #229954;
+  font-weight: bold;
+}
+#guessHistory li.fail {
+  color: #e74c3c;
+}
